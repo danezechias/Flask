@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():  # put application's code here
-    return 'Hello World from Dan Ouiya! I am adding my first code change'
+    return 'Hello world from Dan Ouiya I am hading my first line of code'
+
 @app.route('/hello')
 
 def hello():
