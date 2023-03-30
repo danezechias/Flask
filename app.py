@@ -24,7 +24,7 @@ def courses():
 def favoritecourse():
     if request.method == 'POST':
         print("favorite course: " + request.args.get('course'))
-        print("favorite course number: " + request.args.get('course_number'))
+        print("favorite course number: " + request.args.get('number'))
 
     return render_template('favoritecourse.html')
 
