@@ -14,46 +14,20 @@ def hello():
 def about():
     return render_template('about.html')
 
-@app.route('/nn')
-def courses():
-    fun_courses = ['32', '222', '222']
-    return render_template('nn.html', courses = fun_courses )
 
-
-@app.route('/favoritecourse', methods=['GET'])
+@app.route('/favoritecourse')
 def favoritecourse():
-    if request.method == 'POST':
-        print("favorite course: " + request.args.get('course'))
-        print("favorite course number: " + request.args.get('number'))
-
+    print("enter course: " + request.args.get('course'))
+    print("enter number: " + request.args.get('number'))
     return render_template('favoritecourse.html')
+
 
 @app.route('/contact', methods=['GET'])
 def contact():
     if request.method == 'POST':
-        print("enter firstname: " + request.args.get('firstname'))
-        print("enter lastname: " + request.args.get('lastname'))
-        print("enter email address: " + request.args.get('Email'))
-        print("enter password: " + request.args.get('Password'))
-
-    return render_template('contact.html', form_submitted = True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        return render_template('contact.html', form_submitted = True)
+    else:
+        return render_template('contact.html')
 
 
 
